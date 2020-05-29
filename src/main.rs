@@ -6,9 +6,11 @@ use std::io::Write;
 use std::path::Path;
 
 fn main() {
-    let mut gvc = GVC::new(Engine::Dot, OutputFormat::GIF);
-    stdout().write(
-        &gvc.render(&fs::read_to_string("test_files/graph.dot").unwrap())
-            .unwrap(),
-    ).unwrap();
+    let mut gvc = GVC::new(Engine::Dot, OutputFormat::SVG);
+    stdout()
+        .write(
+            &gvc.render(&fs::read_to_string("test_files/graph.dot").unwrap())
+                .unwrap(),
+        )
+        .unwrap();
 }

@@ -1,9 +1,9 @@
+use crate::error::GenericError;
 use graphviz_sys as gv;
 use std::ffi::CString;
 use std::fs::File;
 use std::os::raw::c_int;
 use std::os::unix::io::FromRawFd;
-use crate::error::GenericError;
 
 /// Represents a pipe between a writable C FILE pointer and a readable rust File
 pub struct Pipe {
@@ -31,7 +31,6 @@ impl Pipe {
                 pipe: pipes,
             })
         }
-
     }
 
     pub fn close(&mut self) {

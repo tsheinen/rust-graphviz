@@ -63,7 +63,7 @@ pub enum Engine {
     Fdp,
     Sfdp,
     Twopi,
-    Circo
+    Circo,
 }
 
 impl Display for Engine {
