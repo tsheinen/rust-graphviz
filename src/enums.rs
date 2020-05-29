@@ -14,6 +14,7 @@ pub enum OutputFormat {
     GTK,
     IMap,
     CMapX,
+    Dot,
 }
 
 impl Display for OutputFormat {
@@ -33,6 +34,7 @@ impl Display for OutputFormat {
                 OutputFormat::GTK => "dia",
                 OutputFormat::IMap => "imap",
                 OutputFormat::CMapX => "cmapx",
+                OutputFormat::Dot => "dot",
             }
         )
     }
