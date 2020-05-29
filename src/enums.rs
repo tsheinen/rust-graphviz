@@ -57,12 +57,22 @@ impl Display for OutputLocation {
 #[derive(Debug)]
 pub enum Engine {
     Dot,
+    Neato,
+    Fdp,
+    Sfdp,
+    Twopi,
+    Circo
 }
 
 impl Display for Engine {
     fn fmt(&self, f: &mut Formatter<'_>) -> Result<(), Error> {
         match self {
             Engine::Dot => write!(f, "dot"),
+            Engine::Neato => write!(f, "neato"),
+            Engine::Fdp => write!(f, "fdp"),
+            Engine::Sfdp => write!(f, "sfdp"),
+            Engine::Twopi => write!(f, "twopi"),
+            Engine::Circo => write!(f, "circo"),
         };
         Ok(())
     }
